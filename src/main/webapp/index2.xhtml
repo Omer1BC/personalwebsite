@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/template/siteTemplate.xhtml">
+
+    <ui:define name="editableContent">
+
+        <h:form id="main">
+            <div style="display: flex; gap: 20px;">
+
+                <div style="width: 40%; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+                    <h3 style="font-size: 24px; font-weight: bold; color: #333;">About Me
+
+                    </h3>
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="http://3.14.7.108:8080/userprofilephotos/6_thumbnail.jpeg?pfdrid_c=false&amp;uid=48aabfc2-abf6-41ef-b0c0-31905b4f3de3"
+                             alt="Your Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;"/>
+                    </div>
+
+                    <p style="font-size: 16px; color: #555; line-height: 1.6;">
+                        Hi, I'm Omer Abbas, and I'm writting this from Ashburn, Virginia. A fun fact about my hometown is that it's the hub for most of the internet traffic in the United States. A good marker that you passed through the city is if
+                        you notice an influx of data centers as you're driving towards DC.
+                    </p>
+                    <p style="font-size: 16px; color: #555; line-height: 1.6;">
+                        I'm the older brother in my family with two younger sisters, aged 14 and 12. They enjoy gaming, Roblox specifically. Most of the games on Roblox are actually player-developed, and I
+                        try using this as an excuse to get my sister's interested in programming... but everytime I'm told "just because we like playing games, doesn't mean we'll enjoy making them." I've made little progress on this front.
+                        When I'm not coding, I'm drawing, and my go-to medium is alcohol markers. It's a uncommon medium that's not really practiced anymore, but worth the trouble if you appreciate graphic shapes.
+                    </p>
+
+                    <div style="margin-top: 20px; border-top: 1px solid #ddd; padding-top: 20px;">
+                        <h4 style="font-size: 20px; font-weight: bold; color: #333;">Why Software Engineering?</h4>
+                        <p style="font-size: 16px; color: #555; line-height: 1.6;">
+                            There are many ways you could go with a computer science degree, but I'm particularly drawn to Software Engineering. The appeal to me is the level of automation-all it takes is for one person to find a solution, and it becomes a click
+                            for everyone else.
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 20px; border-top: 1px solid #ddd; padding-top: 20px;">
+                        <h4 style="font-size: 20px; font-weight: bold; color: #333;">The Cloud</h4>
+                        <p style="font-size: 16px; color: #555; line-height: 1.6;">
+
+                            The cloud made the life of a Software Engineer much easier. Before, deployment looked like finding the infrastructure and hardware to scale your software. Now, that process has been  streamlined with many cloud providers only needing you to interact CLI's to provision resources. With this convenience, it seems like the responsibility has fallen closer and closer to the software developer.
+                            I wanted to be AWS Cloud Certified to get exposure using real-world tools.
+                           I applied what I learned to deploy these projects on the right, please check them out and let me know what you think!
+
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 20px; border-top: 1px solid #ddd; padding-top: 20px;">
+                        <h4 style="font-size: 20px; font-weight: bold; color: #333;">Problems with the Website?</h4>
+                        <p style="font-size: 16px; color: #555; line-height: 1.6;">
+                            Please note that since these websites are hosted on a different computer and throughout the day, maintaining them is an active process, so let me know if you encounter issues via email, so I can get to work to patch them. Thanks for visiting!
+                        </p>
+                    </div>
+                </div>
+
+                <div style="width: 50%; display: flex; flex-direction: column; gap: 20px;">
+
+
+                    <h3 style="font-size: 24px; font-weight: bold; color: #333; text-align: center; margin-bottom: 20px;">Projects</h3>
+
+                    <div class="card">
+                        <div class="card-body" style="padding: 20px; text-align: center;">
+                            <p:commandLink update=":detail1Form" style="width:20px;float:right;"
+                                           oncomplete="PF('detail1Dialog').show()"
+                                           title="Show Admin Account Info">
+
+                                <i class="fa fa-info-circle fa-2x"/>
+                                <!--
+                                When the Info Icon is clicked on (selected), dogController.selected method
+                                is invoked to set the selected current dog object to the adog object.
+                                -->
+                            </p:commandLink>
+                            <h5 class="card-title">VT Marketplace</h5>
+                            <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="Marketplace Icon" style="width: 50px; margin-bottom: 10px;"/>
+                            <p class="card-text">Find other sellers, email them for any items of interest, or moderate users with admin. Click info for Admin account credentials, or make your own!</p>
+                            <button class="btn" onclick="window.open('http://3.14.7.108:8080/VTMarketplace-Abbas/', '_blank')">View</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body" style="padding: 20px; text-align: center;">
+                            <p:commandLink update=":detail2Form" style="width:20px;float:right;"
+                                           oncomplete="PF('detail2Dialog').show()"
+                                           title="Show Example Account Info">
+
+                                <i class="fa fa-info-circle fa-2x"/>
+
+                            </p:commandLink>
+
+                            <h5 class="card-title">Businesses</h5>
+                            <img src="https://img.icons8.com/?size=100&amp;id=53373&amp;format=png&amp;color=000000" alt="Business Icon" style="width: 50px; margin-bottom: 10px;"/>
+                            <p class="card-text">Find businesses near you. Create an account and add to your list from popular choices, filtered database searches, or the Yelp Fusion API!</p>
+                            <button class="btn" onclick="window.open('http://3.14.7.108:8080/Businesses-Abbas/', '_blank')">View</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body" style="padding: 20px; text-align: center;">
+                            <h5 class="card-title">Cocktails</h5>
+                            <img src="https://img.icons8.com/?size=100&amp;id=8336&amp;format=png&amp;color=000000" alt="Homes Icon" style="width: 50px; margin-bottom: 10px;"/>
+                            <p class="card-text">Looking for new cocktails to try? You'll find some ingredients and recipes here!</p>
+                            <button class="btn" onclick="window.open('http://3.14.7.108:8080/Cocktails-Abbas/', '_blank')">View</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <style>
+                .card:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                }
+                .card {
+                    border: 1px solid #cae6fc;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease;
+                }
+
+                .btn {
+                    background-color: #007bff;
+                    border: none;
+                    color: white;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    text-align: center;
+                    transition: background-color 0.3s ease, transform 0.3s ease;
+                }
+
+                .btn:hover {
+                    background-color: #0056b3;
+                }
+
+                h4 {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #333;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 16px;
+                    color: #555;
+                    line-height: 1.6;
+                }
+            </style>
+
+        </h:form>
+        <ui:include src="/detail1.xhtml"/>
+        <ui:include src="/detail2.xhtml"/>
+
+
+    </ui:define>
+</ui:composition>
+
+</html>

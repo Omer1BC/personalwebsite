@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
+<!-- defines the ui when the info button is clicked -->
+<ui:composition>
+    <p:dialog id="detail2Dialog" header="Account Info" widgetVar="detail2Dialog"
+              modal="true" position="center" appendTo="@(body)" width="40%" height="300"
+              showEffect="slide" hideEffect="fade" responsive="true">
+        <h:form id="detail2Form" class="ui-datatable-data">
+            <div align="center">
+
+                <div align="center">
+
+                    <h:graphicImage
+                            style="display: inline-block;
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;"
+                            value="https://hips.hearstapps.com/hmg-prod/images/scarlett-johansson-13671719-1-402.jpg"
+                            class="scalableImage" styleClass="profilePhoto"/>
+                </div>
+
+
+
+                <!--                <h:graphicImage-->
+                <!--                        value="https://upload.wikimedia.org/wikipedia/commons/4/46/Leonardo_Dicaprio_Cannes_2019.jpg"-->
+                <!--                        class="scalableImage"/>-->
+                <!--                <h:graphicImage-->
+                <!--                        value="https://hips.hearstapps.com/hmg-prod/images/scarlett-johansson-13671719-1-402.jpg"-->
+                <!--                        class="scalableImage"/>-->
+                <br /><br />
+                <p>I provided a pre-made account for your convenience, but please make your own to test out the website!</p>
+                <p><strong>Regular account username:</strong> Scarlett.Johansson@gmail.com<br />
+                    <strong>Regular account password:</strong> VT(Marketplace)1872</p>
+
+            </div>
+            <br/><br/>
+            <style>
+                .smallProfilePhoto {
+                    display: inline-block;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                    vertical-align: middle;
+                }
+                .profilePhoto {
+
+                }
+            </style>
+
+        </h:form>
+    </p:dialog>
+</ui:composition>
+</html>

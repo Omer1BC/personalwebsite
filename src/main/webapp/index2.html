@@ -1,0 +1,236 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>GrubGuru</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+<div class="navbar">
+    <div class="left">
+        <a href="#first-page">
+            <h1 class="brand-title">Omer Abbas</h1>
+        </a>
+        <a href="#second-page">
+            <div class="menu-btn">Personal Webiste</div>
+        </a>
+
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <div class="nav-list">
+            <ul>
+
+                <li class="nav-item"><a title="About Me" href="#third-page" class="menu-hover-trigger-link">About Me</a>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="nav-item"><a title="Projects" href="#second-page"
+                                        class="menu-hover-trigger-link">Projects</a></li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="nav-item"><a title="DSA" href="#third-page" class="menu-hover-trigger-link">DSA</a></li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+            </ul>
+        </div>
+    </div>
+    <!--<div class="center">-->
+    <!--    <div class="nav-list">-->
+    <!--        <ul>-->
+
+    <!--            <li class="nav-item"><a title="About Me"  href="#second-page" class="menu-hover-trigger-link">About Me</a></li>-->
+    <!--            &nbsp;&nbsp;&nbsp;&nbsp;-->
+    <!--            <li class="nav-item"><a title="Projects"  href="#second-page" class="menu-hover-trigger-link">Projects</a></li>-->
+    <!--            &nbsp;&nbsp;&nbsp;&nbsp;-->
+    <!--            <li class="nav-item"><a title="DSA"  href="#second-page" class="menu-hover-trigger-link">DSA</a></li>-->
+    <!--            &nbsp;&nbsp;&nbsp;&nbsp;-->
+
+
+    <!--        </ul>-->
+    <!--    </div>-->
+
+
+</div>
+<div class="nav-list">
+    <!-- Though in this example it is using the static class definition, it is recommended to
+         use the JS to dynamically add the fields for the nav bar. Also the link below is just a placeholder,
+         make sure to replace it with the correct link.
+        -->
+
+
+</div>
+<div id="first-page">
+    <!-- Container to play videos -->
+    <div class="video-container">
+        <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="muted" id="video-1">
+            <source src="src/background-video-2.mp4" type="video/mp4"/>
+        </video>
+        <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="muted" id="video-2" style="opacity: 0;">
+            <source src="src/background-video-1.mp4" type="video/mp4"/>
+        </video>
+        <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="muted" id="video-3" style="opacity: 0;">
+            <source src="src/background-video-3.mp4" type="video/mp4"/>
+        </video>
+    </div>
+
+    <div class="first-page">
+        <h1 id="id"></h1>
+        <script>
+            const text = "Omer Abbas";
+            const element = document.getElementById("id");
+            let index = 0;
+
+            function typeWriter() {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    element.classList.add("cursor");
+                    setTimeout(resetText, 3000);
+                }
+            }
+
+            function resetText() {
+                element.textContent = "";
+                index = 0;
+                element.classList.remove("cursor");
+                typeWriter();
+            }
+
+            typeWriter();
+        </script>
+        <div class="user-logged-in">
+            <!-- This is where the user's name will be displayed -->
+            <h2>Welcome, <span id="username">Lorem ipsum</span>!</h2>
+            <a title="Profile" href="#"><span class="ghost-btn primary">Go to Profile</span></a>
+        </div>
+        <div class="user-not-logged-in">
+
+            <a href="#"><span class="ghost-btn">Sign Up</span></a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><span class="ghost-btn primary">Sign In</span></a>
+        </div>
+    </div>
+</div>
+
+<div class="second-page" id="second-page">
+    <div class="content">
+
+        <h2>Second Page Descriptions</h2>
+        <br/>
+        <div class="card">
+            <div class="card-body user-group-card">
+                <img src="src/images/user_group_avatar.svg" alt="Brand Intro Avatar" class="intro-icon"/>
+                <br/>
+                <h3>Description 1</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body recipe-book-card">
+                <img src="src/images/cookbook.svg" alt="Brand Intro Avatar" class="intro-icon"/>
+                <br/>
+                <h3>Description 2</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body chef-card">
+                <img src="src/images/chef.svg" alt="Brand Intro Avatar" class="intro-icon"/>
+                <br/>
+                <h3>Description 3</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body chef-card">
+                <img src="src/images/chef.svg" alt="Brand Intro Avatar" class="intro-icon"/>
+                <br/>
+                <h3>Description 3</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body chef-card">
+                <img src="src/images/chef.svg" alt="Brand Intro Avatar" class="intro-icon"/>
+                <br/>
+                <h3>Description 3</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body chef-card">
+                <img src="src/images/chef.svg" alt="Brand Intro Avatar" class="intro-icon"/>
+                <br/>
+                <h3>Description 3</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="third-page" id="third-page">
+    <div id="header" style="padding-top: 30px">
+        <h3>Hi, I'm Omer</h3>
+        <hr style="width: 30%; height: 2.0px">
+        <h4>A Software Engineer</h4>
+    </div>
+
+    <div style="display: flex">
+        <div id="parent" style="padding-left: 30%">
+            <div style="max-width: 300px">
+                <p style="    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 15px;">I grew up in Ashburn, Virginia. A fun fact about my hometown is that more than half of internet
+                    traffic
+                    in the US passes through our region. The not so fun fact is that to accomodate this, we have more data
+                    centers than there
+                    are people.</p>
+            </div>
+            <div style="max-width: 300px">
+                <p style="max-width: 350px">
+                <p style="font-family: 'Roboto', sans-serif;color: white;font-size: 15px;">
+                    Software engineering to me is nicely summarized by the phrase "better technology makes more better jobs for horses."
+                    It's true that horses did lose their jobs only not to cars, but to other horses driving them, and in some absurd world where horses could drive, I like to think they prefer it and that this is the future I'm working towards with my profession.
+
+                </p>
+
+            </div>
+
+            <div style="max-width: 300px">
+                <p style="max-width: 300px">
+                <p style="font-family: 'Roboto', sans-serif;color: white;font-size: 15px;">
+
+                </p>
+            </div>
+        </div>
+        <div style="padding-left: 10%" id="image">
+            <img src="src/images/Blob.png"
+                 alt="Your Photo" style="width: 400px; height: 400px; border-radius: 50%; object-fit: cover;"/>        </div>
+    </div>
+
+    <!--    <div class="bio">-->
+    <!--        <div id="header" align="center">-->
+    <!--            <div class="main" style="padding-top: 50px;">-->
+    <!--                <h3>Hi, I'm Omer</h3>-->
+    <!--            </div>-->
+    <!--            <hr style="width: 30%; height: 2.0px" />-->
+    <!--            <h4> A Software Engineer</h4>-->
+    <!--        </div>-->
+    <!--&lt;!&ndash;        <div align="center">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;&lt;!&ndash;            <div style="display:flex" id="text_image">&ndash;&gt;&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;&lt;!&ndash;                </div>&ndash;&gt;&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;&lt;!&ndash;            </div>&ndash;&gt;&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+
+    <!--    </div>-->
+
+</div>
+
+</body>
+
+</html>
