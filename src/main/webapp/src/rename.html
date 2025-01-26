@@ -1,0 +1,98 @@
+<!--
+  ~ Created by Omer Abbas on 2025.1.26
+  ~ Copyright © 2025 Omer Abbas. All rights reserved.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>GrubGuru</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../../../../../../Downloads/video-background-demo/video-background-demo/style.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="left">
+            <a href="#first-page"><h1 class="brand-title">Brand Title</h1></a>
+            <a href="#second-page"><div class="menu-btn">Subsection</div></a>
+        </div>
+        <div class="nav-list">
+            <!-- Though in this example it is using the static class definition, it is recommended to 
+             use the JS to dynamically add the fields for the nav bar. Also the link below is just a placeholder,
+             make sure to replace it with the correct link.
+            -->
+            <ul class="user-logged-in">
+                    <li class="nav-item"><a title="Profile" href="#">Profile</a></li>
+                    <li class="nav-item"><a title="Sign Out" href="#">Sign Out</a></li>
+            </ul>
+            <ul class="user-not-logged-in">
+                    <li class="nav-item"><a title="Sign Up" href="#">Sign Up</a></li>
+                    <li class="nav-item"><a title="Sign In" href="#">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="first-page">
+        <!-- Container to play videos -->
+        <div class="video-container">
+            <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="muted" id="video-1">
+                <source src="../../../../../../Downloads/video-background-demo/video-background-demo/src/background-video-2.mp4" type="video/mp4" />
+            </video>
+            <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="muted" id="video-2" style="opacity: 0;">
+                <source src="../../../../../../Downloads/video-background-demo/video-background-demo/src/background-video-1.mp4" type="video/mp4" />
+            </video>
+            <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="muted" id="video-3" style="opacity: 0;">
+                <source src="../../../../../../Downloads/video-background-demo/video-background-demo/src/background-video-3.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+    <div class="first-page">
+        <h1>Brand Title</h1>
+        <div class="user-logged-in">
+            <!-- This is where the user's name will be displayed -->
+            <h2>Welcome, <span id="username">Lorem ipsum</span>!</h2>
+            <a title="Profile" href="#"><span class="ghost-btn primary">Go to Profile</span></a>
+        </div>
+        <div class="user-not-logged-in">
+            <h4>Brand Descriptions</h4>
+            <br />
+            <a href="#"><span class="ghost-btn">Sign Up</span></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><span class="ghost-btn primary">Sign In</span></a>
+        </div>
+    </div>
+    </div>
+
+    <div class="second-page" id="second-page">
+        <div class="content">
+
+            <h2>Second Page Descriptions</h2>
+            <br />
+            <div class="card">
+                <div class="card-body user-group-card">
+                    <img src="../../../../../../Downloads/video-background-demo/video-background-demo/src/images/user_group_avatar.svg" alt="Brand Intro Avatar" class="intro-icon" />
+                    <br />
+                    <h3>Description 1</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body recipe-book-card">
+                    <img src="../../../../../../Downloads/video-background-demo/video-background-demo/src/images/cookbook.svg" alt="Brand Intro Avatar" class="intro-icon" />
+                    <br />
+                    <h3>Description 2</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body chef-card">
+                    <img src="../../../../../../Downloads/video-background-demo/video-background-demo/src/images/chef.svg" alt="Brand Intro Avatar" class="intro-icon" />
+                    <br />
+                    <h3>Description 3</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; Techzjc
+    </div>
+</body>
+</html>

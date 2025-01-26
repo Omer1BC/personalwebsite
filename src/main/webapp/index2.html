@@ -6,6 +6,7 @@
     <title>Personal Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
 
@@ -27,13 +28,13 @@
         <div class="nav-list">
             <ul>
 
-                <li class="nav-item"><a title="About Me" href="#third-page" class="menu-hover-trigger-link">About Me</a>
+                <li class="nav-item"><a title="Home" href="#first-page" class="menu-hover-trigger-link">Home</a>
                 </li>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <li class="nav-item"><a title="Projects" href="#second-page"
                                         class="menu-hover-trigger-link">Projects</a></li>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <li class="nav-item"><a title="DSA" href="#third-page" class="menu-hover-trigger-link">DSA</a></li>
+                <li class="nav-item"><a title="About Me" href="#third-page" class="menu-hover-trigger-link">About Me</a></li>
                 &nbsp;&nbsp;&nbsp;&nbsp;
 
 
@@ -106,16 +107,7 @@
 
             typeWriter();
         </script>
-        <div class="user-logged-in">
-            <!-- This is where the user's name will be displayed -->
-            <h2>Welcome, <span id="username">Lorem ipsum</span>!</h2>
-            <a title="Profile" href="#"><span class="ghost-btn primary">Go to Profile</span></a>
-        </div>
-        <div class="user-not-logged-in">
 
-            <a href="#"><span class="ghost-btn">Sign Up</span></a> &nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="#"><span class="ghost-btn primary">Sign In</span></a>
-        </div>
     </div>
 </div>
 
@@ -125,31 +117,176 @@
         <h2>Projects</h2>
         <br/>
         <div class="card">
-            <div class="card-body user-group-card">
-<!--                <h3>VT Marketplace</h3>-->
-                <img src="src/images/user_group_avatar.svg" alt="Brand Intro Avatar" class="intro-icon"/>
-                <br/>
-                <h3 style="font-size: 12px; max-width: 280px">Find other sellers, email them for any items of interest, or moderate users with admin.</h3>
+            <div class="content-info" style="display: flex">
+                <div class="card-body user-group-card">
+                    <!--                <h3>VT Marketplace</h3>-->
+                    <img src="https://img.icons8.com/?size=100&amp;id=9720&amp;format=png&amp;color=92D0D1" alt="Icon 1" class="intro-icon"/>
+                    <br/>
+                    <h3 style="font-size: 12px; max-width: 280px">Find other sellers, email them for any items of
+                        interest, or moderate users with admin.</h3>
 
+                </div>
+                <button style="width: 15px; height: 15px; top:-30px; font-size: 15px; border: none; cursor: pointer;background: none;;color: #42a5f5;"
+                        class="openButton" onclick="openDialog()">
+                    <i class="fas fa-info-circle"></i>
+                </button>
             </div>
 
+            <div>
+                <button style="background-color: #42a5f5; color: white; border: none; padding: 3px; border-radius: 5px; cursor: pointer; width: 15%; font-size: 16px; transition: background-color 0.3s ease;"
+                        class="close-button"
+                        onclick="window.open('http://3.14.7.108:8080/VTMarketplace-Abbas/', '_blank')"
+                        onmouseover="this.style.backgroundColor='#1e88e5'"
+                        onmouseout="this.style.backgroundColor='#42a5f5'">
+                    View
+                </button>
+            </div>
+
+            <dialog style="max-height: 60%; width: 25%; position: fixed; border: none; border-radius: 8px; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" id="dialog">
+                <!--                <div style="position: relative; padding-bottom: 10px;">-->
+                <!--                    <button style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; color: #000000; cursor: pointer;" onclick="closeDialog()">×</button>-->
+                <!--                </div>-->
+
+                <div>
+                    <img alt="icon"
+                         style="display: inline-block;
+
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;"
+                         src="https://cdn.britannica.com/65/227665-050-D74A477E/American-actor-Leonardo-DiCaprio-2016.jpg"
+                         class="scalableImage" /> &nbsp;
+
+                    <img alt="icon"
+                         style="display: inline-block;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;"
+                         src="https://hips.hearstapps.com/hmg-prod/images/scarlett-johansson-13671719-1-402.jpg"
+                         class="scalableImage" />
+                    <p style="    font-family: 'Roboto', sans-serif; font-size: 10px">This app comes with an administrator account that has additional privileges.
+                        I will provide that and another regular account for your convenience, but I encourage you to make your own. They are all celeberity themed, and admin seems to be a fitting role for Leonardo DiCaprio</p>
+                    <p style="    font-family: 'Roboto', sans-serif;font-size: 10px"><strong>Admin account username:</strong> Administrator<br />
+                        <strong style="    font-family: 'Roboto', sans-serif;">Admin account password:</strong> VT(Marketplace)1872</p>
+                    <p style="    font-family: 'Roboto', sans-serif;font-size: 10px"><strong>Regular account username:</strong> Scarlett.Johansson@gmail.com<br />
+                        <strong>Regular account password:</strong> VT(Marketplace)1872</p>
+
+                </div>
+
+                <button style="background-color: #42a5f5; color: white; border: none; padding: 3px; border-radius: 5px; cursor: pointer; width: 15%; font-size: 16px;" class="close-button" onclick="closeDialog()">Close</button>
+            </dialog>
+
+
+            <script>
+
+                function openDialog() {
+                    document.getElementById('dialog').showModal();
+                }
+
+
+                function closeDialog() {
+                    document.getElementById('dialog').close();
+                }
+            </script>
 
 
         </div>
 
         <div class="card">
-            <div class="card-body recipe-book-card">
-                <img src="src/images/cookbook.svg" alt="Brand Intro Avatar" class="intro-icon"/>
-                <br/>
-                <h3>Description 2</h3>
+
+            <div class="content-info" style="display: flex">
+                <h3 style="text-align:center;    color: #9cd076;
+font-size: 18px; max-width: 280px">Businesses</h3>
+                <div class="card-body recipe-book-card">
+
+                    <img src="https://img.icons8.com/?size=100&amp;id=53373&amp;format=png&amp;color=9cd076
+" alt="Icon 2" class="intro-icon"/>
+                    <br/>
+                    <h3 style="font-size: 12px; max-width: 280px">Create an account and add to your list from popular choices, filtered database searches, or the Yelp Fusion API!</h3>
+                </div>
+                <button style="width: 15px; height: 15px; top:-30px; font-size: 15px; border: none; cursor: pointer;background: none;;color: #42a5f5;"
+                        class="openButton" onclick="openDialog2()">
+                    <i class="fas fa-info-circle"></i>
+                </button>
             </div>
+            <div id="view">
+                <button style="background-color: #42a5f5; color: white; border: none; padding: 3px; border-radius: 5px; cursor: pointer; width: 15%; font-size: 16px; transition: background-color 0.3s ease;"
+                        class="close-button"
+                        onclick="window.open('http://3.14.7.108:8080/Businesses-Abbas/', '_blank')"
+                        onmouseover="this.style.backgroundColor='#1e88e5'"
+                        onmouseout="this.style.backgroundColor='#42a5f5'">
+                    View
+                </button>
+
+            </div>
+            <dialog style="max-height: 60%; width: 25%; position: fixed; border: none; border-radius: 8px; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" id="dialog2">
+                <!--                <div style="position: relative; padding-bottom: 10px;">-->
+                <!--                    <button style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; color: #000000; cursor: pointer;" onclick="closeDialog()">×</button>-->
+                <!--                </div>-->
+
+                <div>
+
+                    <img alt="icon"
+                         style="display: inline-block;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;"
+                         src="https://hips.hearstapps.com/hmg-prod/images/scarlett-johansson-13671719-1-402.jpg"
+                         class="scalableImage" />
+                    <p style="    font-family: 'Roboto', sans-serif; font-size: 10px">Here is a pre-made account for your convenience.</p>
+                    <p style="    font-family: 'Roboto', sans-serif;font-size: 10px"><strong>Username:</strong> Scarlett.Johansson@gmail.com<br />
+                        <strong>Password:</strong> VT(Marketplace)1872</p>
+
+                </div>
+
+                <button style="background-color: #42a5f5; color: white; border: none; padding: 3px; border-radius: 5px; cursor: pointer; width: 15%; font-size: 16px;" class="close-button" onclick="closeDialog2()">Close</button>
+            </dialog>
+
+            <script>
+
+                function openDialog2() {
+                    document.getElementById('dialog2').showModal();
+                }
+
+
+                function closeDialog2() {
+                    document.getElementById('dialog2').close();
+                }
+            </script>
+
+
         </div>
         <div class="card">
-            <div class="card-body chef-card">
-                <img src="src/images/chef.svg" alt="Brand Intro Avatar" class="intro-icon"/>
-                <br/>
-                <h3>Description 3</h3>
+            <div class="content-info" style="display: flex">
+                <div class="card-body chef-card">
+                    <img src="https://img.icons8.com/?size=100&amp;id=8336&amp;format=png&amp;color=e08668" alt="Brand Intro Avatar" class="intro-icon" />
+                    <br />
+                    <h3 style="font-size: 12px; max-width: 280px">Looking for new cocktails to try? You'll find some ingredients and recipes here!</h3>
+                </div>
+
             </div>
+
+            <div >
+                <button style="background-color: #42a5f5; color: white; border: none; padding: 3px; border-radius: 5px; cursor: pointer; width: 15%; font-size: 16px; transition: background-color 0.3s ease;"
+                        class="close-button"
+                        onclick="window.open('http://3.14.7.108:8080/Cocktails-Abbas/', '_blank')"
+                        onmouseover="this.style.backgroundColor='#1e88e5'"
+                        onmouseout="this.style.backgroundColor='#42a5f5'">
+                    View
+                </button>
+
+            </div>
+
+
         </div>
     </div>
 </div>
@@ -167,15 +304,19 @@
     color: white;
     font-size: 15px;">I grew up in Ashburn, Virginia. A fun fact about my hometown is that more than half of internet
                     traffic
-                    in the US passes through our region. The not so fun fact is that to accomodate this, we have more data
+                    in the US passes through our region. The not so fun fact is that to accomodate this, we have more
+                    data
                     centers than there
                     are people.</p>
             </div>
             <div style="max-width: 300px">
                 <p style="max-width: 350px">
                 <p style="font-family: 'Roboto', sans-serif;color: white;font-size: 15px;">
-                    Software engineering to me is nicely summarized by the phrase "better technology makes more better jobs for horses."
-                    It's true that horses did lose their jobs only not to cars, but to other horses driving them, and in some absurd world where horses could drive, I like to think they prefer it and that this is the future I'm working towards with my profession.
+                    Software engineering to me is nicely summarized by the phrase "better technology makes more better
+                    jobs for horses."
+                    It's true that horses did lose their jobs only not to cars, but to other horses driving them, and in
+                    some absurd world where horses could drive, I like to think they prefer it and that this is the
+                    future I'm working towards with my profession.
 
                 </p>
 
@@ -190,7 +331,7 @@
         </div>
         <div style="padding-left: 5%" id="image">
             <img src="src/images/Blob.png"
-                 alt="Your Photo" style="width: 400px; height: 400px; border-radius: 50%; object-fit: cover;"/>        </div>
+                 alt="Your Photo" style="width: 400px; height: 400px; border-radius: 50%; object-fit: cover;"/></div>
     </div>
 
     <!--    <div class="bio">-->
